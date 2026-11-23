@@ -11,3 +11,7 @@ npm.cmd run build:hibrido
 ```
 
 La entrega híbrida queda en `dist-hibrido/`. FastAPI sirve la aplicación en [el puerto 8011](http://127.0.0.1:8011/) y entrega el modelo de 52 clases por las rutas `/model/`. `npm.cmd run build` genera la variante de referencia de 8010 en `dist/`. Durante el desarrollo, `npm.cmd run dev` reenvía las rutas `/api` a 8010. Consulta el [README](../README.md) para iniciar la versión de entrega.
+
+## Compilación para GitHub Pages
+
+`npm.cmd run build:pages` genera `dist-pages/` con el modelo ONNX validado de 52 clases. La cámara, el reconocimiento con GRU, el deletreo, la voz, el modo recocha y las lecciones se ejecutan en el navegador. Se puede descargar el JSON de una captura. Para usar el Random Forest complementario y guardar capturas en el servidor, ejecuta la edición híbrida de FastAPI.

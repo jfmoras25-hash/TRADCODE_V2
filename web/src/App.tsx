@@ -13,14 +13,15 @@ import type { ModoReconocimiento } from './lib/reconocimientoHibrido'
 import { activarAudioRecocha, reproducirRecocha } from './lib/voz'
 
 const practicaLibre = new URLSearchParams(location.search).has('practica')
-const hibrido = import.meta.env.MODE === 'hibrido' && !practicaLibre
+const sitioPublico = import.meta.env.MODE === 'pages'
+const traductorPorModos = (import.meta.env.MODE === 'hibrido' || sitioPublico) && !practicaLibre
 
 export default function App() {
   const [camara, setCamara] = useState(false)
   const [reconocer, setReconocer] = useState(false)
   const [verAjustes, setVerAjustes] = useState(false)
   const [verCaptura, setVerCaptura] = useState(false)
-  const [modo, setModo] = useState<ModoReconocimiento>(hibrido ? 'deletreo' : 'general')
+  const [modo, setModo] = useState<ModoReconocimiento>(traductorPorModos ? 'deletreo' : 'general')
   const [usarBosque, setUsarBosque] = useState(true)
   const [recocha, setRecocha] = useState(false)
   const { ajustes, cambiar, restablecer } = useAjustes()
@@ -33,9 +34,9 @@ export default function App() {
   const rec = useReconocedor(
     vision, clf, ajustes, reconocer && captura.fase.tipo === 'quieto',
     practicaLibre ? practica.alConfirmar : (etiqueta) => {
-      traduccion.agregar(etiqueta, hibrido && recocha && reproducirRecocha(etiqueta))
+      traduccion.agregar(etiqueta, traductorPorModos && recocha && reproducirRecocha(etiqueta))
     },
-    modo, usarBosque,
+    modo, !sitioPublico && usarBosque,
   )
   const candidato = rec.top[0]
 
@@ -52,7 +53,7 @@ export default function App() {
       <div className="traductor-camara">
         <h2 id="titulo-traductor">{practicaLibre ? 'Práctica libre' : 'Traductor'}</h2>
         <p>Coloca tus manos frente a la cámara y mantén la seña un momento.</p>
-        {hibrido && (
+        {traductorPorModos && (
           <div className="controles-modo">
             <label>
               Modo de reconocimiento
@@ -61,7 +62,7 @@ export default function App() {
                 <option value="palabras">Palabras y señas</option>
               </select>
             </label>
-            {modo === 'deletreo' && (
+            {modo === 'deletreo' && !sitioPublico && (
               <label>
                 <input type="checkbox" checked={usarBosque} onChange={(e) => setUsarBosque(e.target.checked)} />
                 Preferir Random Forest
@@ -116,7 +117,7 @@ export default function App() {
         <div className="resumen-reconocimiento">
           <p id="resultado">
             Seña detectada: {candidato ? `${nombreSena(config, candidato.etiqueta)} · ${Math.round(candidato.p * 100)}%` : '—'}
-            {hibrido && candidato?.motor && ` · ${candidato.motor === 'RF' ? 'Random Forest' : 'GRU'}`}
+            {traductorPorModos && candidato?.motor && ` · ${candidato.motor === 'RF' ? 'Random Forest' : 'GRU'}`}
           </p>
           {candidato && <progress className="confirmacion" value={rec.progreso} max={1} aria-label="Confirmación de la seña" />}
           <label className="voz-automatica">
@@ -135,7 +136,7 @@ export default function App() {
             }}>
             {verCaptura ? 'Ocultar captura' : 'Capturar seña'}
           </button>
-          {verCaptura && <PanelCapturar cap={captura} etiquetasModelo={config?.etiquetas ?? []} />}
+          {verCaptura && <PanelCapturar cap={captura} etiquetasModelo={config?.etiquetas ?? []} guardarEnServidor={!sitioPublico} />}
         </div>
       </div>
       {verAjustes && (

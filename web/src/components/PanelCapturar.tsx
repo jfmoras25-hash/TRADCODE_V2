@@ -161,7 +161,11 @@ export function SuperposicionCaptura({ fase }: { fase: FaseCaptura }) {
   )
 }
 
-export function PanelCapturar({ cap, etiquetasModelo }: { cap: Captura; etiquetasModelo: string[] }) {
+export function PanelCapturar({ cap, etiquetasModelo, guardarEnServidor = true }: {
+  cap: Captura
+  etiquetasModelo: string[]
+  guardarEnServidor?: boolean
+}) {
   const ocupado = cap.fase.tipo !== 'quieto'
   const conteo = useMemo(() => {
     const c = new Map<string, number>()
@@ -238,9 +242,9 @@ export function PanelCapturar({ cap, etiquetasModelo }: { cap: Captura; etiqueta
           <p className="ayuda">Aún no hay ejemplos.</p>
         )}
         <div className="botonera">
-          <button onClick={cap.guardar} disabled={!cap.muestras.length || ocupado || cap.guardando}>
+          {guardarEnServidor && <button onClick={cap.guardar} disabled={!cap.muestras.length || ocupado || cap.guardando}>
             {cap.guardando ? 'Guardando…' : 'Guardar en TRADCODE'}
-          </button>
+          </button>}
           <button className="primario" onClick={cap.descargar} disabled={!cap.muestras.length || ocupado}>
             Descargar JSON
           </button>

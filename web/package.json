@@ -10,6 +10,7 @@
     "prebuild": "node scripts/preparar.mjs",
     "build": "tsc -b && vite build",
     "build:hibrido": "node scripts/preparar.mjs && tsc -b && vite build --mode hibrido --outDir dist-hibrido",
+    "build:pages": "node scripts/preparar.mjs && tsc -b && vite build --mode pages --outDir dist-pages && node scripts/preparar-pages.mjs",
     "preview": "vite preview --host",
     "test": "vitest run",
     "lint": "oxlint"

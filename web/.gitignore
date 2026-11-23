@@ -11,6 +11,7 @@ node_modules
 dist
 dist-ssr
 dist-hibrido
+dist-pages
 *.local
 
 # Editor directories and files
