@@ -1,0 +1,43 @@
+TRADCODE — Créditos
+
+Proyecto TRADCODE
+Identidad visual, pantallas e ilustraciones recuperadas de Fronted/ del proyecto anterior.
+La página Sobre el proyecto conserva el contexto académico original. Se conservan las poses A–E y el
+sonido de finalización aportados con el proyecto. El material fuente no incluía autoría o licencia
+individual para las imágenes, poses y el audio. Esta recuperación no les asigna una licencia nueva.
+
+Recursos externos
+- WebXR Input Profiles, perfil generic-hand, malla de mano con aviso MIT, © 2019 Amazon.
+  https://github.com/immersive-web/webxr-input-profiles/tree/main/packages/assets
+  licencias/webxr-input-profiles.txt
+- Three.js y sus complementos GLTFLoader y CSS2DRenderer. MIT.
+  https://github.com/mrdoob/three.js
+  licencias/three.txt
+- Eidos de Lanix Iligan. Visor y 16 poses originales de referencia ASL.
+  https://github.com/lanixiligan/eidos
+  modelos/poses/eidos-asl/README.md y modelos/poses/eidos-asl/LICENSE.txt
+- Orbitron, The Orbitron Project Authors. SIL Open Font License 1.1.
+  https://github.com/google/fonts/tree/main/ofl/orbitron
+  licencias/orbitron.txt
+- MediaPipe Tasks y detectores de manos y postura, Google. Apache 2.0 para el código de MediaPipe.
+  https://github.com/google-ai-edge/mediapipe
+  https://ai.google.dev/edge/mediapipe/solutions/vision/hand_landmarker
+  https://ai.google.dev/edge/mediapipe/solutions/vision/pose_landmarker
+  Los archivos de los dos detectores se descargan desde Google durante la instalación.
+- ONNX Runtime Web, Microsoft. MIT.
+  https://github.com/microsoft/onnxruntime
+- React, Vite, FastAPI y Uvicorn. React, Vite y FastAPI usan MIT. Uvicorn usa BSD 3-Clause.
+  https://github.com/facebook/react
+  https://github.com/vitejs/vite
+  https://github.com/fastapi/fastapi
+  https://github.com/encode/uvicorn
+- PyTorch y scikit-learn para entrenamiento y evaluación en Python. BSD 3-Clause.
+  https://github.com/pytorch/pytorch
+  https://github.com/scikit-learn/scikit-learn
+- LSC70, versión 2, de Jader Alejandro Muñoz Galindez, Leidy Verónica Villota Coral y Rubiel Vargas-Canas.
+  Universidad del Cauca. CC BY 4.0. Se extrajeron landmarks de dos secciones y se entrenó la GRU.
+  https://data.mendeley.com/datasets/9ssyn8tff5/2
+  https://creativecommons.org/licenses/by/4.0/
+- La GRU de entrega amplía la GRU inicial con cinco clases de capturas locales. El Random Forest
+  es el modelo histórico de TRADCODE. Las muestras privadas y el dataset se mantienen fuera de Git.
+- Web Speech API. La síntesis usa las voces disponibles en el navegador y el sistema operativo.

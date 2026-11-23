@@ -1,0 +1,107 @@
+/*-----------------------
+    1. PARTE GENERAL DE LA PAGINA
+    -------------------------*/
+
+    *{
+        box-sizing:border-box;
+    }
+
+    body{
+        margin:0;
+        padding:0;
+        font-family: Arial, sans-serif;
+        background-color: #F5F0E6;
+        color: #183C3B;
+    }
+
+    /*--------------------------
+       2. BARRA DE NAVEGACIÓN
+       -------------------------*/
+
+       .barra{
+        width:100%;
+        max-width: 1100px;
+        margin:auto;
+        padding: 25px 20px;
+        display:flex;
+        justify-content: space-between;
+        align-items: center;
+       }
+
+       /* LOGO */
+       .barra-logo {
+        color: #183C3B;
+        font-size: 25px;
+        font-weight: 900;
+        text-decoration: none;
+        letter-spacing: -1px;
+       }
+
+       .barra-logo span{
+        color: #D87856;
+       }
+
+       /* ENLACES */
+       .barra-enlaces {
+        display: flex;
+        align-items: center;
+        gap: 35px;
+       }
+
+       .barra-enlaces a{
+        position: relative;
+        color: #287C73;
+        font-size: 15px;
+        font-weight: bold;
+        text-decoration:none;
+        padding: 8px 0;
+        transition: color 0.3s ease;
+       }
+
+       /* EFECTO AL PASAR EL CURSOR */
+       .barra-enlaces a::after{
+        content: "";
+        position: absolute;
+        left:0;
+        bottom: 0;
+        width: 0;
+        height: 2px;
+        background-color: #D87856;
+        transition: width 0.3s ease;
+       }
+
+       .barra-enlaces a:hover{
+        color: #D87856;
+       }
+
+       .barra-enlaces a:hover::after{
+        width: 100%;
+       }
+
+/*--------------------------
+       PIE DE PÁGINA
+------------------------*/
+.pie {
+    margin-top: 30px;
+    padding: 25px 15px;
+    color: #7B8981;
+    font-size: 13px;
+    text-align: center;
+}
+
+/*---------------------------
+    DISEÑO PARA CELULARES
+------------------------------*/
+@media (max-width:600px){
+    .barra{
+        flex-direction:column;
+        gap:20px;
+    }
+
+    .barra-enlaces {
+        gap:15px;
+        flex-wrap:wrap;
+        justify-content: center;
+    }
+}
+    

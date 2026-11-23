@@ -1,0 +1,60 @@
+# Datos y salidas de entrenamiento locales
+/ml/datos/
+/ml/datos_prueba/
+/ml/modelos_mediapipe/
+/ml/resultados/
+*.npz
+*.npy
+*.pt
+*.pth
+*.zip
+captura_*.json
+capturas*.json
+
+# Versiones necesarias para ejecutar 8011 y métricas agregadas de la GRU 52.
+# Los informes completos contienen identificadores de participantes y archivos.
+/ml/candidatas/*
+!/ml/candidatas/gru_50/
+!/ml/candidatas/gru_52/
+/ml/candidatas/gru_50/*
+!/ml/candidatas/gru_50/config.json
+/ml/candidatas/gru_52/*
+!/ml/candidatas/gru_52/config.json
+!/ml/candidatas/gru_52/modelo.onnx
+!/ml/candidatas/gru_52/exportacion.json
+!/ml/candidatas/gru_52/historial.json
+!/ml/candidatas/gru_52/metricas_por_clase.csv
+!/ml/candidatas/gru_52/matriz_confusion.csv
+
+# Recursos generados o privados del frontend
+/web/public/mediapipe-wasm/
+/web/public/ort/
+/web/public/models/
+/web/public/referencias/*
+!/web/public/referencias/LEEME.md
+
+# Entornos, cachés, binarios locales y registros
+__pycache__/
+*.py[cod]
+node_modules/
+.venv/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.cache/
+.tools/
+/ENTREGA_FINAL_TRADCODE/
+*.log
+*.tmp
+
+# Credenciales y configuración local
+.env
+.env.*
+.npmrc
+.pypirc
+id_rsa
+id_ed25519
+*.pem
+*.key
+*.p12
+*.pfx

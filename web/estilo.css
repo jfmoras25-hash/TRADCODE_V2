@@ -1,0 +1,593 @@
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #101820, #243b53);
+    color: white;
+    text-align: center;
+}
+
+/**/
+header {
+    padding: 25px;
+    background-color: rgba(255, 255, 255, 0.08);
+    border-radius: 15px;
+}
+
+header h1{
+    font-family: "Orbitron", sans-serif;
+    font-size: 45px;
+    letter-spacing: 3px;
+}
+
+header p{
+    font-size: 16px;
+    margin-top: 8px;
+    color: #d0d7de;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.visor {
+    position: relative;
+    width: 640px;
+    height: 480px;
+    background-color: black;
+    margin: 20px auto;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.visor video {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.visor canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+button {
+    padding: 12px 25px;
+    background-color: #ffffff;
+    color: #101820;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#estado {
+    margin: 15px;
+    font-size:16px;
+}
+
+.activa{
+    color: #4caf50;
+}
+
+.apagada{
+    color: #f44336;
+}
+
+.panel-landmarks {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 14px;
+    width: min(640px, 100%);
+    min-height: 22px;
+    margin: 2px auto 6px;
+}
+
+.estado-landmark {
+    display: inline-flex;
+    align-items: center;
+    gap: 3px;
+    color: #33433e;
+    font-size: 11px;
+    white-space: nowrap;
+}
+
+.estado-landmark strong.detectado {
+    color: #287c73;
+}
+
+.estado-landmark strong.no-detectado {
+    color: #8a918e;
+}
+
+@media (max-width: 520px) {
+    .panel-landmarks {
+        flex-wrap: wrap;
+        column-gap: 10px;
+        row-gap: 3px;
+    }
+}
+
+.inicio {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.contenido-inicio {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 40px;
+    border-radius: 20px;
+    width: 90%;
+    max-width: 600px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.contenido-inicio h1{
+    font-size: 50px;
+    margin-bottom: 20px;
+}
+
+.contenido-inicio h2{
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+/* Botón de entrar */
+.boton-entrar {
+    display: inline-block;
+    padding: 12px 30px;
+    background-color: white;
+    color: #101820;
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 18px;
+}
+
+/* ========================================
+   DISEÑO DE LA PÁGINA DE INICIO TRADCODE
+   ======================================== */
+
+body.pagina-inicio{
+    margin: 0;
+    background: #f5f0e6;
+    color: #183c3b;
+    font-family: Arial, sans-serif;
+}
+
+/*parte pricipal de la bienvenida*/
+.pagina-inicio .inicio{
+    min-height: 100vh;
+    padding: 50px 20px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pagina-inicio .contenido-inicio{
+    width: 100%;
+    max-width: 1000px;
+    padding: 35px 20px;
+    box-sizing: border-box;
+    background: transparent;
+    border: none;
+    border-radius: 0;
+}
+
+/*Texto pequeño en la parte superior*/
+.pagina-inicio .etiqueta-inicio{
+    color: #287c73;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 4px;
+    margin-bottom: 25px;
+    animation: aparecer 1s ease both;
+}
+
+/*Nombre principal pagina*/
+.pagina-inicio .contenido-inicio h1{
+    margin: 0 0 25px;
+    font-size: clamp(48px, 10vw, 100px);
+    font-weight: 900;
+    letter-spacing: -4px;
+    color: #183c3b;
+    animation: entrarTitulo 1s ease both;
+}
+
+.pagina-inicio .contenido-inicio h1 span{
+    display: inline-block;
+    color: #d87856;
+    animation: puntoFlotante 2s ease-in-out infinite;
+}
+
+/*Movimiento del titulo*/
+@keyframes entrarTitulo{
+    from{
+        opacity:0;
+        transform: translateY(45px);
+    }
+    to{
+        opacity:1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes puntoFlotante{
+    0%, 100%{
+        transform: translateY(0);
+    }
+    50%{
+        transform: translateY(-8px);
+    }
+}
+
+@keyframes aparecer{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+/*parte principal*/
+.pagina-inicio .contenido-inicio h2{
+    margin: 0 0 20px;
+    color: #183c3b;
+    font-size: clamp(28px, 5vw, 46px);
+    line-height: 1.2;
+    letter-spacing: -1px;
+}
+
+.pagina-inicio .descripcion-inicio{
+    max-width: 480px;
+    margin: 0 auto 30px;
+    color: #5d6b65;
+    font-size: 17px;
+    line-height: 1.8;
+}
+
+/*parte de ilustraciones*/
+.pagina-inicio .escena-manos{
+    position: relative;
+    max-width: 650px;
+    height: 220px;
+    margin: 35px auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 35px;
+    overflow: hidden;
+}
+
+.pagina-inicio .mano {
+    position: relative;
+    z-index: 2;
+    animation: manosFlotantes 3s ease-in-out infinite;
+}
+
+.pagina-inicio .mano img {
+    display: block;
+    height: 105px;
+    width: auto;
+}
+
+.pagina-inicio .mano-derecha {
+    animation-delay: 0.6s;
+}
+
+@keyframes manosFlotantes {
+    0%, 100% {
+        transform: translateY(0) rotate(-5deg);
+    }
+
+    50% {
+        transform: translateY(-15px) rotate(5deg);
+    }
+}
+
+/*Palabras alrededor de las manos*/
+.pagina-inicio .palabra{
+    position: absolute;
+    z-index: 3;
+    padding: 9px 15px;
+    border-radius: 30px;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    animation: aparecer 1.2s ease both, 
+           palabrasFlotantes 4s ease-in-out infinite;
+}
+
+.pagina-inicio .palabra-hola{
+    top:20px;
+    left: 12%;
+    background: #d87856;
+    color: white;
+}
+
+.pagina-inicio .palabra-comunicar {
+    right: 5%;
+    bottom: 25px;
+    background: #dce9df;
+    color: #183c3b;
+    animation-delay: 0.5s;
+}
+
+@keyframes palabrasFlotantes {
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-8px);
+    }
+}
+
+/*circulo decorativo de mrda*/
+.pagina-inicio .circulo-decorativo{
+    position: absolute;
+    width: 180px;
+    height: 180px;
+    border: 1px solid rgba(40, 124, 115, 0.3);
+    border-radius: 50%;
+    animation: girarCirculo 15s linear infinite;
+}
+
+@keyframes girarCirculo{
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
+
+/* Boton para entrar */
+.pagina-inicio .boton-entrar{
+    padding: 16px 28px;
+    background: #183c3b;
+    color: white;
+    border-radius: 40px;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.pagina-inicio .boton-entrar:hover{
+    background: #287c73;
+    transform: translateY(-4px);
+}
+
+.pagina-inicio .boton-entrar span{
+    display: inline-block;
+    margin-left: 10px;
+    transition: transform 0.3s ease;
+}
+
+.pagina-inicio .boton-entrar:hover span{
+    transform: translateX(5px);
+}
+
+.pagina-inicio .nota-inicio {
+    margin-top: 28px;
+    color: #7b8981;
+    font-size: 13px;
+}
+
+
+/* ========================================
+   DISEÑO DEL INDEX-TRADUCTOR
+   ======================================== */
+
+body.pagina-traductor{
+    margin:0;
+    padding: 30px 20px;
+    box-sizing: border-box;
+    background: #f5f0e6;
+    color: #183c3b;
+    font-family: Arial, sans-serif;
+}
+
+/*pagina del encabezado*/
+.pagina-traductor .encabezado{
+    background: transparent;
+    padding: 10px 0;
+}
+
+.pagina-traductor .encabezado h1{
+    margin:0;
+    font-family: Arial, sans-serif;
+    font-size: clamp(36px, 7vw, 60px);
+    font-weight: 900;
+    letter-spacing: -2px;
+    color: #183c3b;
+}
+
+.pagina-traductor .encabezado h1 span{
+    color: #d87856;
+}
+
+.pagina-traductor .encabezado p{
+    margin-top: 10px;
+    color: #287c73;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+}
+
+/*detalles de sombras*/
+.pagina-traductor .visor{
+    box-shadow: 0 8px 24px rgba(24, 60, 59, 0.25);
+}
+
+/*estado activa/apagada */
+.pagina-traductor .activa{
+    color: #287c73;
+    font-weight: bold;
+}
+
+.pagina-traductor .apagada {
+    color: #d87856;
+    font-weight: bold;
+}
+
+/* resultado de la seña*/
+.pagina-traductor #resultado{
+    display: inline-block;
+    padding: 10px 22px;
+    background: #dce9df;
+    color: #183c3b;
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 30px;
+}
+
+/*botones*/
+.pagina-traductor button{
+    margin: 5px;
+    padding: 14px 26px;
+    background: #183c3b;
+    color:white;
+    font-weight: bold;
+    border-radius: 40px;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.pagina-traductor button:hover{
+    background: #287c73;
+    transform: translateY(-3px);
+}
+
+.pagina-traductor #capturarSena{
+    background: #d87856;
+}
+
+.pagina-traductor #capturarSena:hover{
+    background: #c4633f;
+}
+
+/*ZOna de capturar señas*/
+.pagina-traductor .captura-datos{
+    margin-top: 25px;
+    padding-top:20px;
+    border-top: 1px solid rgba(24, 60, 59, 0.12);
+}
+
+.pagina-traductor .captura-datos label{
+    margin-right: 8px;
+    font-weight: bold;
+    color: #183c3b;
+}
+
+.pagina-traductor .captura-datos input {
+    width: 60px;
+    margin-right: 10px;
+    padding: 12px;
+    background: #f5f0e6;
+    color: #183c3b;
+    border: 2px solid #dce9df;
+    border-radius: 12px;
+    font-size: 18px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.pagina-traductor .captura-datos input:focus {
+    outline: none;
+    border-color: #287c73;
+}
+
+/* ===== Navegación y pie (páginas internas) ===== */
+
+.pagina-traductor .barra {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    max-width: 1100px;
+    margin: 0 auto 30px;
+    padding: 20px 10px;
+}
+
+/* Logo de TRADCODE */
+.pagina-traductor .barra-logo {
+    font-size: 24px;
+    font-weight: 900;
+    letter-spacing: -1px;
+    color: #183c3b;
+    text-decoration: none;
+    transition: color 0.25s ease;
+}
+
+.pagina-traductor .barra-logo span {
+    color: #d87856;
+}
+
+/* Enlaces de navegación */
+.pagina-traductor .barra-enlaces {
+    display: flex;
+    align-items: center;
+    gap: 35px;
+}
+
+.pagina-traductor .barra-enlaces a {
+    position: relative;
+    color: #287c73;
+    font-size: 15px;
+    font-weight: 700;
+    text-decoration: none;
+    padding: 8px 0;
+    transition: color 0.25s ease;
+}
+
+/* Línea decorativa al pasar el cursor */
+.pagina-traductor .barra-enlaces a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background-color: #d87856;
+    transition: width 0.25s ease;
+}
+
+.pagina-traductor .barra-enlaces a:hover {
+    color: #d87856;
+}
+
+.pagina-traductor .barra-enlaces a:hover::after {
+    width: 100%;
+}
+
+/* Pie de página */
+.pagina-traductor .pie {
+    margin-top: 50px;
+    color: #7b8981;
+    font-size: 13px;
+    text-align: center;
+}
+
+@media (max-width: 640px) {
+    .pagina-traductor .barra {
+        flex-direction: column;
+        gap: 12px;
+        margin-bottom: 18px;
+    }
+    .pagina-traductor .barra-enlaces {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 4px 16px;
+    }
+}
+

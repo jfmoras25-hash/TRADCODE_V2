@@ -1,0 +1,6 @@
+fastapi==0.143.0
+uvicorn==0.54.0
+pydantic==2.14.4
+numpy==2.5.5
+# El archivo legado solo se deserializa con esta versión.
+scikit-learn==1.9.1

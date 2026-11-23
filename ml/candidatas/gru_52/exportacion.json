@@ -1,0 +1,7 @@
+{
+  "clases": 52,
+  "exportacion_sha256": {
+    "modelo.onnx": "097c808016722e6084afac49aa9d8269a95168413f7ab9bb395e82655247d3a7",
+    "config.json": "ac339a04b85b8463fd4b406554454c388a1cb059dab25df0a51c4bde44209d47"
+  }
+}

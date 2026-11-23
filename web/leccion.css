@@ -1,0 +1,508 @@
+
+/* -----------------------------------
+   1. CONTENEDOR PRINCIPAL
+----------------------------------- */
+
+.contenedor-leccion {
+    width: 90%;
+    max-width: 1100px;
+    margin: 35px auto 60px;
+}
+
+
+/* -----------------------------------
+   2. ENCABEZADO DE LA LECCIÓN
+----------------------------------- */
+
+.encabezado-leccion {
+    margin-bottom: 30px;
+}
+
+.volver-abecedario {
+    display: inline-block;
+    margin-bottom: 25px;
+    color: #287C73;
+    font-size: 14px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.volver-abecedario:hover {
+    text-decoration: underline;
+}
+
+.navegacion-lecciones {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px 24px;
+    margin-bottom: 20px;
+}
+
+.navegacion-lecciones a {
+    color: #287C73;
+    font-weight: bold;
+}
+
+.navegacion-lecciones [rel="next"] {
+    margin-left: auto;
+}
+
+.encabezado-leccion .etiqueta {
+    color: #287C73;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.encabezado-leccion h1 {
+    margin: 12px 0;
+    color: #183C3B;
+    font-size: 36px;
+}
+
+.encabezado-leccion > p:last-child {
+    color: #64736A;
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+
+/* -----------------------------------
+   3. INFORMACIÓN DE LA LETRA
+----------------------------------- */
+
+.informacion-letra {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    margin-bottom: 30px;
+    padding: 25px;
+    border: 1px solid #E2E8E1;
+    border-radius: 18px;
+    background-color: #FFFFFF;
+}
+
+.letra-destacada {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-width: 125px;
+    min-height: 125px;
+    border-radius: 18px;
+    background-color: #DCE9DF;
+}
+
+.letra-destacada span {
+    color: #183C3B;
+    font-size: 55px;
+    font-weight: bold;
+}
+
+.letra-destacada p {
+    margin: 0;
+    color: #64736A;
+    font-size: 11px;
+}
+
+.descripcion-letra h2 {
+    color: #183C3B;
+    font-size: 20px;
+}
+
+.descripcion-letra p {
+    color: #64736A;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+
+/* -----------------------------------
+   4. ZONA DE PRÁCTICA
+----------------------------------- */
+
+.zona-practica {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+}
+
+.panel-practica {
+    padding: 22px;
+    border: 1px solid #E2E8E1;
+    border-radius: 18px;
+    background-color: #FFFFFF;
+}
+
+.titulo-panel {
+    margin-bottom: 20px;
+}
+
+.titulo-panel > div {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.numero-panel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    border-radius: 10px;
+    background-color: #DCE9DF;
+    color: #287C73;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.titulo-panel h2 {
+    margin: 0;
+    color: #183C3B;
+    font-size: 19px;
+}
+
+
+/* -----------------------------------
+   5. VISOR DEL MODELO 3D
+----------------------------------- */
+
+.visor-modelo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 320px;
+    padding: 20px;
+    border-radius: 14px;
+    background-color: #F5F0E6;
+    text-align: center;
+}
+
+.visor-modelo p {
+    color: #183C3B;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.visor-modelo span {
+    color: #64736A;
+    font-size: 13px;
+}
+
+
+/* -----------------------------------
+   6. VISOR DE LA CÁMARA
+----------------------------------- */
+
+.visor-camara {
+    position: relative;
+    width: 100%;
+    height: 480px;
+    overflow: hidden;
+    border-radius: 14px;
+    background-color: #183C3B;
+}
+
+/* Imagen capturada por la cámara */
+.visor-camara video{
+    position:absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: scaleX(-1);
+}
+
+.visor-camara canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: scaleX(-1);
+    pointer-events: none;
+}
+
+.mensaje-camara {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 3;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    padding: 15px;
+    color: white;
+    text-align: center;
+    background-color: #183C3B;
+}
+
+.mensaje-camara p {
+    margin-bottom: 8px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.mensaje-camara span{
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+/* Estado de la cámara */
+.estado-camara {
+    margin: 15px 0;
+    color: #64736A;
+    font-size: 13px;
+}
+
+.panel-practica button {
+    padding: 12px 20px;
+    border: none;
+    border-radius: 22px;
+    background-color: #287C73;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.2s;
+}
+
+/* Botón cuando está deshabilitado */
+
+.panel-practica button:disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
+}
+
+/* Efecto al pasar el cursor */
+.panel-practica button:not(:disabled):hover {
+    background-color: #183C3B;
+    transform: translateY(-2px);
+}
+
+.ayuda-panel {
+    color: #64736A;
+    font-size: 12px;
+    line-height: 1.6;
+}
+
+
+/* -----------------------------------
+   7. DISEÑO RESPONSIVE
+----------------------------------- */
+
+@media (max-width: 768px) {
+
+    .zona-practica {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .panel-practica {
+        min-width: 0;
+    }
+
+    .encabezado-leccion h1 {
+        font-size: 29px;
+    }
+
+    .informacion-letra {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+}
+
+@media (max-width: 480px) {
+
+    .contenedor-leccion {
+        width: 92%;
+    }
+
+    .panel-practica {
+        padding: 15px;
+    }
+
+    .visor-modelo{
+        min-height: 260px;
+    }
+
+    .visor-camara {
+        min-height: 260px;
+    }
+
+}
+
+#modelo3d {
+    width: 100%;
+    height: 480px;
+    min-height: 400px;
+    overflow: hidden;
+    border-radius: 15px;
+    background-color: #F5F0E6;
+}
+
+/* ========================================
+   8. RESULTADOS DE LA PRÁCTICA
+======================================== */
+.panel-resultados {
+    background-color: #FFFFFF;
+    border: 1px solid #E5E1D8;
+    border-radius: 18px;
+    padding: 28px;
+    margin-top: 30px;
+}
+
+/* Orden de los resultados */
+.resultado-reconocimiento {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+    margin-top: 25px;
+}
+
+/* Tarjetas de información */
+.informacion-resultado,
+.informacion-confianza {
+    background-color: #F5F0E6;
+    padding: 25px;
+    border-radius: 14px;
+}
+
+/* Textos pequeños  de las tarjetas*/
+.informacion-resultado span,
+.informacion-confianza span {
+    display: block;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    color: #64736A;
+}
+
+/* Letra reconocida */
+.informacion-resultado h3{
+    font-size: 48px;
+    color: #183C3B;
+    margin: 12px 0;
+}
+
+/* Porcentaje de confianza */
+.informacion-confianza h3 {
+    font-size: 32px;
+    color: #183C3B;
+    margin: 15px 0;
+}
+
+/* Mensaje para  el estudiante */
+.informacion-resultado p{
+    color: #64736A;
+    margin: 0;
+    line-height: 1.5;
+}
+
+/* ========================================
+   9. VENTANA DE FELICITACIÓN
+======================================== */
+.modal-felicitacion{
+    position: fixed;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(24, 60, 59, 0.75);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index:1000;
+    padding: 20px;
+}
+
+.modal-felicitacion.mostrar {
+    display: flex;
+    animation: aparecerFondo 0.4s ease;
+}
+
+.contenido-felicitacion {
+    background-color: #FFFFFF;
+    padding: 40px;
+    border-radius: 22px;
+    max-width: 430px;
+    width: 100%;
+    text-align: center;
+    animation: aparecerTarjeta 0.5s ease;
+}
+
+.icono-felicitacion {
+    font-size: 65px;
+    margin-bottom: 15px;
+    animation: celebrar 1s ease infinite;
+}
+
+.contenido-felicitacion h2{
+    color: #183C3B;
+    font-size: 28px;
+    margin-bottom: 12px;
+}
+
+.contenido-felicitacion p{
+    color: #64736A;
+    line-height: 1.6;
+    margin-bottom: 25px;
+}
+
+.boton-felicitacion {
+    display: inline-block;
+    background-color: #287C73;
+    color: #FFFFFF;
+    padding: 13px 22px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.boton-felicitacion:hover {
+    background-color: #183C3B;
+}
+
+/* ANIMACIONES */
+@keyframes aparecerFondo {
+    from {
+        opacity: 0;
+    } to {
+        opacity: 1;
+    }
+}
+
+@keyframes aparecerTarjeta {
+    from{
+        opacity:0;
+        transform: scale(0.7) translateX(30px);
+    } to{
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
+}
+
+@keyframes celebrar{
+    0%, 100%{
+        transform: rotate(-10deg) scale(1);
+    } 50%{
+        transform: rotate(10deg) scale(1.15);
+    }
+}
+
+/* Adaptación para celulares */
+
+@media (max-width: 700px) {
+
+    .resultado-reconocimiento {
+        grid-template-columns: 1fr;
+    }
+
+}

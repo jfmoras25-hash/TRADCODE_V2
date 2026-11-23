@@ -1,0 +1,298 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abecedario | TRADCODE</title>
+
+    <link rel="stylesheet" href="general.css">
+    <link rel="stylesheet" href="abecedario.css">
+</head>
+
+<body class="pagina-abecedario">
+
+    <!-- Barra de navegación -->
+    <nav class="barra">
+        <a href="inicio.html" class="barra-logo">
+            TRADCODE<span>.</span>
+        </a>
+
+        <div class="barra-enlaces">
+            <a href="index.html">Traductor</a>
+            <a href="aprendizaje.html">Aprendizaje</a>
+            <a href="sobre.html">Sobre el proyecto</a>
+        </div>
+    </nav>
+
+    <main class="contenedor-abecedario">
+
+        <!-- Dashboard principal -->
+        <section class="dashboard-abecedario">
+
+            <div class="encabezado-dashboard">
+
+                <div class="texto-dashboard">
+                    <span class="etiqueta">TU ESPACIO DE APRENDIZAJE</span>
+
+                    <h1>¡Aprende algo nuevo hoy!</h1>
+
+                    <p>
+                        Descubre la Lengua de Señas Colombiana y avanza
+                        paso a paso en tu aprendizaje.
+                    </p>
+                </div>
+
+                <div class="icono-dashboard">
+                    <span>🤟</span>
+                </div>
+
+            </div>
+
+            <!-- Tarjeta principal -->
+            <div class="tarjeta-principal">
+
+                <div class="contenido-tarjeta">
+
+                    <span class="nivel">NIVEL 01 · PRINCIPIANTE</span>
+
+                    <h2>El alfabeto</h2>
+
+                    <p>
+                        Aprende las 27 letras del alfabeto manual
+                        y practica cada seña utilizando tu cámara.
+                    </p>
+
+                    <a href="#introduccion" class="boton-comenzar">
+                        Comenzar aprendizaje
+                        <span>→</span>
+                    </a>
+
+                </div>
+
+                <div class="decoracion-tarjeta">
+                    <span>ABC</span>
+                </div>
+
+            </div>
+
+            <!-- Estadísticas -->
+            <div class="estadisticas-dashboard">
+
+                <!-- Letras aprendidas -->
+                <div class="tarjeta-estadistica">
+
+                    <div class="icono-estadistica verde">
+
+                        <svg xmlns="http://www.w3.org/2000/svg"
+                            width="25" height="25"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="1.8"
+                            stroke-linecap="round"
+                            stroke-linejoin="round">
+
+                            <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/>
+                            <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2Z"/>
+
+                        </svg>
+
+                    </div>
+
+                    <div>
+                        <h3 id="letras-aprendidas">0 / 27</h3>
+                        <p>Letras aprendidas</p>
+                    </div>
+
+                </div>
+
+                <!-- Progreso general -->
+                <div class="tarjeta-estadistica">
+
+                    <div class="icono-estadistica naranja">
+
+                        <svg xmlns="http://www.w3.org/2000/svg"
+                            width="25" height="25"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="1.8"
+                            stroke-linecap="round"
+                            stroke-linejoin="round">
+
+                            <circle cx="12" cy="12" r="10"/>
+                            <circle cx="12" cy="12" r="6"/>
+                            <circle cx="12" cy="12" r="2"/>
+
+                        </svg>
+
+                    </div>
+
+                    <div>
+                        <h3 id="progreso-general">0%</h3>
+                        <p>Progreso general</p>
+                    </div>
+
+                </div>
+
+                <!-- Prácticas completadas -->
+                <div class="tarjeta-estadistica">
+
+                    <div class="icono-estadistica amarillo">
+
+                        <svg xmlns="http://www.w3.org/2000/svg"
+                            width="25" height="25"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="1.8"
+                            stroke-linecap="round"
+                            stroke-linejoin="round">
+
+                            <circle cx="12" cy="8" r="6"/>
+                            <path d="M8.21 13 7 23l5-3 5 3-1.21-10"/>
+
+                        </svg>
+
+                    </div>
+
+                    <div>
+                        <h3 id="practicas-completadas">0</h3>
+                        <p>Prácticas completadas</p>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- Tarjeta de progreso -->
+            <div class="progreso-dashboard">
+
+                <div class="encabezado-progreso">
+
+                    <div>
+                        <h3>Tu progreso de aprendizaje</h3>
+                        <p>Así va tu recorrido por el abecedario.</p>
+                    </div>
+
+                    <span class="porcentaje-progreso" id="porcentaje-progreso">0%</span>
+
+                </div>
+
+                <div class="barra-progreso">
+                    <div class="avance-progreso" id="avance-progreso"></div>
+                </div>
+
+                <div class="detalle-progreso">
+                    <span id="detalle-letras">0 de 27 letras completadas</span>
+                    <span>¡Tú puedes!</span>
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- Introducción -->
+        <section class="introduccion" id="introduccion">
+
+            <div class="texto-introduccion">
+
+                <p class="etiqueta">ANTES DE COMENZAR</p>
+
+                <h2>
+                    ¿Qué es el alfabeto dactilológico de la
+                    Lengua de Señas Colombiana (LSC)?
+                </h2>
+
+                <p>
+                    El alfabeto dactilológico de la Lengua de Señas
+                    Colombiana (LSC) es un sistema de representación
+                    manual de las letras del alfabeto utilizado por
+                    la comunidad sorda en Colombia. Este sistema es
+                    fundamental para deletrear nombres propios,
+                    lugares y palabras que no cuentan con una seña
+                    específica.
+                </p>
+
+                <p>
+                    En esta lección conocerás las letras del
+                    alfabeto manual de la Lengua de Señas Colombiana
+                    y podrás practicar cada una frente a tu cámara.
+                </p>
+
+            </div>
+
+            <div class="imagen-introduccion">
+
+                <img
+                    src="imagenes/aprendizaje/abecedario.jpg"
+                    alt="Ilustración de un alfabeto manual con correspondencia LSC sin verificar">
+
+            </div>
+
+        </section>
+
+        <!-- Álbum de letras -->
+        <section class="album-letras">
+
+            <div class="encabezado-album">
+
+                <div>
+                    <p class="etiqueta">TU RECORRIDO</p>
+
+                    <h2>Tu avance de aprendizaje</h2>
+
+                    <p>
+                        Completa cada letra mientras avanzas en la lección.
+                    </p>
+                </div>
+
+                <span class="contador" id="contador-letras">0 de 27 letras</span>
+
+            </div>
+
+            <div class="rejilla-letras">
+
+                <a href="leccion.html?letra=A" class="letra">A</a>
+                <a href="leccion.html?letra=B" class="letra">B</a>
+                <a href="leccion.html?letra=C" class="letra">C</a>
+                <a href="leccion.html?letra=D" class="letra">D</a>
+                <a href="leccion.html?letra=E" class="letra">E</a>
+                <a href="leccion.html?letra=F" class="letra">F</a>
+                <a href="leccion.html?letra=G" class="letra">G</a>
+                <a href="leccion.html?letra=H" class="letra">H</a>
+                <a href="leccion.html?letra=I" class="letra">I</a>
+                <a href="leccion.html?letra=J" class="letra">J</a>
+                <a href="leccion.html?letra=K" class="letra">K</a>
+                <a href="leccion.html?letra=L" class="letra">L</a>
+                <a href="leccion.html?letra=M" class="letra">M</a>
+                <a href="leccion.html?letra=N" class="letra">N</a>
+                <a href="leccion.html?letra=Ñ" class="letra">Ñ</a>
+                <a href="leccion.html?letra=O" class="letra">O</a>
+                <a href="leccion.html?letra=P" class="letra">P</a>
+                <a href="leccion.html?letra=Q" class="letra">Q</a>
+                <a href="leccion.html?letra=R" class="letra">R</a>
+                <a href="leccion.html?letra=S" class="letra">S</a>
+                <a href="leccion.html?letra=T" class="letra">T</a>
+                <a href="leccion.html?letra=U" class="letra">U</a>
+                <a href="leccion.html?letra=V" class="letra">V</a>
+                <a href="leccion.html?letra=W" class="letra">W</a>
+                <a href="leccion.html?letra=X" class="letra">X</a>
+                <a href="leccion.html?letra=Y" class="letra">Y</a>
+                <a href="leccion.html?letra=Z" class="letra">Z</a>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- Pie de página -->
+    <footer class="pie">
+        La programación también nos acerca.
+    </footer>
+
+  <script type="module" src="/src/abecedario.ts"></script>
+</body>
+</html>

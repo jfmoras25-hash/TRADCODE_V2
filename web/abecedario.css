@@ -1,0 +1,466 @@
+
+/* -----------------------------------
+   1. CONTENEDOR PRINCIPAL
+----------------------------------- */
+
+.contenedor-abecedario {
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+
+/* -----------------------------------
+   2. DASHBOARD DEL ABECEDARIO
+----------------------------------- */
+
+.dashboard-abecedario {
+    width: 100%;
+    margin: 35px auto 55px;
+}
+
+
+/* ENCABEZADO DEL DASHBOARD */
+
+.encabezado-dashboard {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.texto-dashboard {
+    max-width: 650px;
+}
+
+.texto-dashboard .etiqueta {
+    display: inline-block;
+    padding: 8px 15px;
+    border-radius: 20px;
+    background-color: #DCE9DF;
+    color: #287C73;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.texto-dashboard h1 {
+    margin: 15px 0 10px;
+    color: #183C3B;
+    font-size: 38px;
+}
+
+.texto-dashboard p {
+    color: #64736A;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.icono-dashboard {
+    width: 115px;
+    height: 115px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 30px;
+    background-color: #DCE9DF;
+    font-size: 55px;
+}
+
+
+/* TARJETA PRINCIPAL */
+
+.tarjeta-principal {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 230px;
+    padding: 35px 45px;
+    overflow: hidden;
+    border-radius: 22px;
+    background: linear-gradient(120deg, #183C3B, #287C73);
+    color: white;
+}
+
+.contenido-tarjeta {
+    position: relative;
+    z-index: 2;
+    max-width: 550px;
+}
+
+.nivel {
+    color: #DCE9DF;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.contenido-tarjeta h2 {
+    margin: 12px 0;
+    font-size: 34px;
+}
+
+.contenido-tarjeta p {
+    color: #E0EBE4;
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+.boton-comenzar {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    margin-top: 15px;
+    padding: 13px 22px;
+    border-radius: 25px;
+    background-color: #F5F0E6;
+    color: #183C3B;
+    font-weight: bold;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.boton-comenzar:hover {
+    background-color: #DCE9DF;
+    transform: translateY(-3px);
+}
+
+.decoracion-tarjeta {
+    position: absolute;
+    right: 55px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: rgba(255, 255, 255, 0.12);
+    font-size: 100px;
+    font-weight: 900;
+    letter-spacing: -8px;
+}
+
+
+/* ESTADÍSTICAS */
+
+.estadisticas-dashboard {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin: 25px 0;
+}
+
+.tarjeta-estadistica {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 22px;
+    border: 1px solid #E2E8E1;
+    border-radius: 16px;
+    background-color: white;
+}
+
+.icono-estadistica {
+    width: 48px;
+    height: 48px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 13px;
+    font-size: 23px;
+}
+
+.verde {
+    background-color: #DCE9DF;
+}
+
+.naranja {
+    background-color: #F8E3D9;
+}
+
+.amarillo {
+    background-color: #F8EFCF;
+}
+
+.tarjeta-estadistica h3 {
+    margin: 0 0 5px;
+    color: #183C3B;
+    font-size: 23px;
+}
+
+.tarjeta-estadistica p {
+    margin: 0;
+    color: #64736A;
+    font-size: 12px;
+}
+
+
+/* PROGRESO DE APRENDIZAJE */
+
+.progreso-dashboard {
+    margin: 25px 0 45px;
+    padding: 28px;
+    border: 1px solid #E2E8E1;
+    border-radius: 18px;
+    background-color: #FFFFFF;
+    box-shadow: 0 5px 18px rgba(24, 60, 59, 0.04);
+}
+
+.encabezado-progreso {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+}
+
+.encabezado-progreso h3 {
+    margin: 0 0 7px;
+    color: #183C3B;
+    font-size: 18px;
+}
+
+.encabezado-progreso p {
+    margin: 0;
+    color: #7B8981;
+    font-size: 13px;
+}
+
+.porcentaje-progreso {
+    color: #287C73;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.barra-progreso {
+    width: 100%;
+    height: 12px;
+    margin: 22px 0 15px;
+    overflow: hidden;
+    border-radius: 20px;
+    background-color: #E8EDE8;
+}
+
+.avance-progreso {
+    width: 0%;
+    height: 100%;
+    border-radius: 20px;
+    background: linear-gradient(90deg, #287C73, #75B69B);
+    transition: width 0.4s ease;
+}
+
+.detalle-progreso {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    color: #64736A;
+    font-size: 13px;
+}
+
+.icono-estadistica svg {
+    display: block;
+}
+
+
+/* -----------------------------------
+   3. SECCIÓN DE INTRODUCCIÓN
+----------------------------------- */
+
+.introduccion {
+    display: flex;
+    align-items: center;
+    gap: 45px;
+    margin: 35px auto 70px;
+    padding: 35px;
+    border-radius: 20px;
+    background-color: #FFFFFF;
+}
+
+.texto-introduccion {
+    flex: 1;
+}
+
+.texto-introduccion h2 {
+    margin-top: 0;
+    color: #183C3B;
+    font-size: 27px;
+}
+
+.texto-introduccion p {
+    color: #64736A;
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+.imagen-introduccion {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.imagen-introduccion img {
+    width: 100%;
+    max-width: 400px;
+    height: 280px;
+    object-fit: contain;
+}
+
+
+/* -----------------------------------
+   4. ENCABEZADO DEL ÁLBUM
+----------------------------------- */
+
+.encabezado-album {
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.encabezado-album h2 {
+    color: #183C3B;
+    font-size: 30px;
+}
+
+.encabezado-album p {
+    color: #64736A;
+    font-size: 15px;
+}
+
+
+/* -----------------------------------
+   5. CUADRÍCULA DE LETRAS
+----------------------------------- */
+
+.rejilla-letras {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 15px;
+    margin-bottom: 60px;
+}
+
+.rejilla-letras a{
+    text-decoration: none;
+}
+
+.letra {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 85px;
+    border: 1px solid #DCE4DC;
+    border-radius: 14px;
+    background-color: #FFFFFF;
+    color: #183C3B;
+    font-size: 27px;
+    font-weight: bold;
+    transition: transform 0.3s ease,
+                box-shadow 0.3s ease;
+}
+
+.letra:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 15px rgba(24, 60, 59, 0.10);
+}
+
+/* Letras que ya fueron completadas */
+.letra.completada {
+    background-color: #DCE9DF;
+    border: 2px solid #287C73;
+    color: #183C3B;
+}
+
+
+/* -----------------------------------
+   6. DISEÑO RESPONSIVE
+----------------------------------- */
+
+@media (max-width: 768px) {
+
+    .encabezado-dashboard {
+        gap: 15px;
+    }
+
+    .texto-dashboard h1 {
+        font-size: 30px;
+    }
+
+    .icono-dashboard {
+        width: 80px;
+        height: 80px;
+        font-size: 38px;
+    }
+
+    .estadisticas-dashboard {
+        grid-template-columns: 1fr;
+    }
+
+    .tarjeta-principal {
+        padding: 30px;
+    }
+
+    .decoracion-tarjeta {
+        right: 15px;
+        font-size: 65px;
+    }
+
+    .introduccion {
+        flex-direction: column;
+        padding: 25px;
+    }
+
+    .imagen-introduccion img {
+        height: 230px;
+    }
+
+    .rejilla-letras {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+}
+
+
+@media (max-width: 480px) {
+
+    .dashboard-abecedario {
+        width: 92%;
+    }
+
+    .encabezado-dashboard {
+        align-items: flex-start;
+    }
+
+    .texto-dashboard h1 {
+        font-size: 26px;
+    }
+
+    .icono-dashboard {
+        display: none;
+    }
+
+    .tarjeta-principal {
+        padding: 25px;
+    }
+
+    .contenido-tarjeta h2 {
+        font-size: 28px;
+    }
+
+    .decoracion-tarjeta {
+        display: none;
+    }
+
+    .texto-progreso {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .introduccion {
+        padding: 20px;
+    }
+
+    .rejilla-letras {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
+    }
+
+    .letra {
+        min-height: 70px;
+        font-size: 23px;
+    }
+
+}

@@ -1,0 +1,227 @@
+/*--------------------*/
+/*   SOBRE EL PROYECTO  */
+
+/*PARTE DE PORTADA*/
+.pagina-sobre .portada-sobre {
+    display: grid;
+    grid-template-columns: 1.1fr 1fr;
+    align-items: center;
+    gap: 40px;
+    max-width: 1000px;
+    margin: 0 auto 50px;
+    padding: 30px 0;
+    background: transparent;
+    border-radius: 0;
+    text-align: left;
+}
+
+.pagina-sobre .etiqueta-portada{
+    color: #287c73;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 3px;
+}
+
+.pagina-sobre .portada-texto h1{
+    margin: 15px 0;
+    font-family: Arial, sans-serif;
+    font-size: clamp(34px, 6vw, 56px);
+    font-weight: 900;
+    letter-spacing: -2px;
+    line-height: 1.1;
+    color: #183c3b;
+}
+
+.pagina-sobre .portada-texto p{
+    margin: 0 0 25px;
+    color: #5d6b65;
+    font-size: 17px;
+    line-height: 1.8;
+}
+
+.pagina-sobre .boton-portada{
+    display: inline-block;
+    padding: 16px 28px;
+    background: #183c3b;
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 40px;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.pagina-sobre .boton-portada:hover {
+    background: #287c73;
+    transform: translateY(-4px);
+}
+
+/*Imagen de portada*/
+.pagina-sobre .portada-imagen{
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    background: #dce9df;
+    border-radius: 30px;
+}
+
+.pagina-sobre .portada-imagen img {
+    display: block;
+    width: 100%;
+    max-width: 480px;
+    height: auto;
+    animation: flotar 5s ease-in-out infinite;
+}
+
+@keyframes flotar {
+    0%, 100% { transform: translateY(0); }
+    50%      { transform: translateY(-12px); }
+}
+
+
+/*CONTENIDO: SECCIONES CON IMAGEN*/
+.pagina-sobre .contenido-sobre {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 90px;
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.pagina-sobre .banda {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 48px;
+}
+
+/*Imagen a la derecha en la sección invertida*/
+.pagina-sobre .banda.invertida .banda-imagen {
+    order: 2;
+}
+
+.pagina-sobre .banda-imagen {
+    overflow: hidden;
+    border-radius: 28px;
+    box-shadow: 0 10px 30px rgba(24, 60, 59, 0.1);
+}
+
+.pagina-sobre .banda-imagen img {
+    display: block;
+    width: 100%;
+    height: auto;
+    transition: transform 0.6s ease;
+}
+
+.pagina-sobre .banda-imagen:hover img {
+    transform: scale(1.04);
+}
+
+/*Etiqueta numerada con rayita*/
+.pagina-sobre .banda-etiqueta {
+    display: inline-block;
+    margin-bottom: 14px;
+    color: #287c73;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+.pagina-sobre .banda-etiqueta::before {
+    content: "";
+    display: inline-block;
+    width: 28px;
+    height: 3px;
+    margin-right: 10px;
+    vertical-align: middle;
+    background: #d87856;
+    border-radius: 3px;
+}
+
+.pagina-sobre .contenido-sobre h2 {
+    margin: 0 0 16px;
+    font-size: clamp(28px, 4vw, 40px);
+    letter-spacing: -1.5px;
+    line-height: 1.15;
+    color: #183c3b;
+}
+
+.pagina-sobre .contenido-sobre p {
+    margin: 0 0 14px;
+    color: #5d6b65;
+    font-size: 16px;
+    line-height: 1.85;
+}
+
+
+/*TARJETAS DE TECNOLOGÍAS*/
+.pagina-sobre .rejilla-tec {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+    margin-top: 24px;
+}
+
+.pagina-sobre .tec {
+    padding: 18px;
+    background: white;
+    border: 1px solid rgba(24, 60, 59, 0.12);
+    border-radius: 18px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.pagina-sobre .tec:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 30px rgba(24, 60, 59, 0.08);
+}
+
+.pagina-sobre .tec svg {
+    box-sizing: content-box;
+    width: 24px;
+    height: 24px;
+    margin-bottom: 12px;
+    padding: 10px;
+    background: #dce9df;
+    color: #287c73;
+    border-radius: 12px;
+}
+
+.pagina-sobre .tec h3 {
+    margin: 0 0 6px;
+    font-size: 15px;
+    color: #183c3b;
+}
+
+.pagina-sobre .tec p {
+    margin: 0;
+    font-size: 13px;
+    line-height: 1.55;
+}
+
+
+/*PIE DE PÁGINA*/
+.pagina-sobre .pie {
+    max-width: 1000px;
+    margin: 100px auto 0;
+    padding-top: 24px;
+    border-top: 1px solid rgba(24, 60, 59, 0.12);
+    color: #7b8981;
+    font-size: 13px;
+    text-align: center;
+}
+
+@media (max-width: 720px) {
+    .pagina-sobre .portada-sobre,
+    .pagina-sobre .banda {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 22px;
+    }
+    .pagina-sobre .banda.invertida .banda-imagen {
+        order: 0;
+    }
+    .pagina-sobre .contenido-sobre {
+        gap: 42px;
+    }
+}

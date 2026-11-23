@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre el proyecto</title>
+    <link rel="stylesheet" href="estilo.css">
+    <link rel="stylesheet" href="sobre.css">
+</head>
+<body class="pagina-traductor pagina-sobre">
+        <nav class="barra">
+        <a href="inicio.html" class="barra-logo">TRADCODE<span>.</span></a>
+        <div class="barra-enlaces">
+            <a href="index.html">Traductor</a>
+            <a href="aprendizaje.html">Aprendizaje</a>
+            <a href="sobre.html">Sobre el proyecto</a>
+        </div>
+        </nav>
+
+    <header class="portada-sobre">
+        <div class="portada-texto">
+            <span class="etiqueta portada">TRADCODE · COMUNICACIÓN SIN BARRERAS</span>
+            <h1>Conectar personas, superar barreras.</h1>
+            <p>
+                Conoce el proyecto que busca facilitar la comunicación
+                mediante el reconocimiento de señas y el uso de inteligencia artificial.
+            </p>
+            <a href="index.html" class="boton-portada">
+                Conocer el traductor →
+            </a>
+        </div>
+
+        <div class="portada-imagen">
+        <img
+            src="imagenes/portada-sobre.svg"
+            alt="Mano con diseño de tradcode"
+        >
+    </div>
+    </header>
+
+    <main class="contenido-sobre">
+        <section class="banda">
+            <div class="banda-imagen">
+                <img src="imagenes/problema.jpg" alt="Dos personas que se comunican de formas distintas">
+            </div>
+            <div class="banda-texto">
+                <span class="banda-etiqueta">01 · El problema</span>
+                <h2>Cuando no hablamos el mismo idioma</h2>
+                <p>
+                    La comunicación puede ser difícil cuando una persona no conoce
+                    la lengua de señas que utiliza otra persona. Esto puede generar
+                    barreras al momento de expresar ideas, necesidades o sentimientos.
+                    Por eso, con TRADCODE quiero desarrollar una herramienta que
+                    ayude a reconocer algunas señas y mostrar su significado en texto
+                    y voz, facilitando un poco la comunicación entre las personas.
+                </p>
+            </div>
+        </section>
+
+
+        <section class="banda invertida">
+            <div class="banda-imagen">
+                <img src="imagenes/tecnologias.svg" alt="Capas de tecnologías de TRADCODE">
+            </div>
+            <div class="banda-texto">
+                <span class="banda-etiqueta">02 · Herramientas</span>
+                <h2>Tecnologías utilizadas</h2>
+                <p>
+                    Para desarrollar TRADCODE se utilizaron diferentes tecnologías.
+                    Cada una cumple una función dentro de la aplicación.
+                </p>
+
+                <div class="rejilla-tec">
+                     <div class="tec">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+                        <h3>HTML, CSS y React</h3>
+                        <p>Organizan el contenido, dan estilo a la interfaz y presentan el traductor y las lecciones.</p>
+                    </div>
+                    <div class="tec">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 11V6a2 2 0 0 0-2-2a2 2 0 0 0-2 2"/><path d="M14 10V4a2 2 0 0 0-2-2a2 2 0 0 0-2 2v2"/><path d="M10 10.5V6a2 2 0 0 0-2-2a2 2 0 0 0-2 2v8"/><path d="M18 8a2 2 0 1 1 4 0v6a8 8 0 0 1-8 8h-2c-2.8 0-4.5-.86-5.99-2.34l-3.6-3.6a2 2 0 0 1 2.83-2.82L7 15"/></svg>
+                        <h3>MediaPipe</h3>
+                        <p>Detecta los puntos de referencia de la mano a partir de la imagen de la cámara.</p>
+                    </div>
+                    <div class="tec">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="7" rx="2"/><rect x="3" y="14" width="18" height="7" rx="2"/><line x1="7" y1="6.5" x2="7.01" y2="6.5"/><line x1="7" y1="17.5" x2="7.01" y2="17.5"/></svg>
+                        <h3>Python y FastAPI</h3>
+                        <p>Sirven la aplicación y guardan capturas de puntos cuando el usuario lo solicita.</p>
+                    </div>
+                    <div class="tec">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="6" r="2.5"/><circle cx="18" cy="6" r="2.5"/><circle cx="12" cy="18" r="2.5"/><line x1="8.2" y1="7.3" x2="10.2" y2="16"/><line x1="15.8" y1="7.3" x2="13.8" y2="16"/><line x1="8.5" y1="6" x2="15.5" y2="6"/></svg>
+                        <h3>GRU y ONNX Runtime Web</h3>
+                        <p>Clasifican secuencias de seis cuadros en el navegador. La edición híbrida reconoce 52 categorías entrenadas.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="banda">
+            <div class="banda-imagen">
+                <img src="imagenes/desarrollo.svg" alt="Una ventana de código">
+            </div>
+            <div class="banda-texto">
+                <span class="banda-etiqueta">03 · Proyecto</span>
+                <h2>Sobre el desarrollo</h2>
+                <p>
+                    TRADCODE es un proyecto desarrollado como parte de la asignatura de
+                    Desarrollo Web, con el propósito de poner en práctica los conocimientos
+                    adquiridos en la construcción de páginas web y la integración de diferentes
+                    tecnologías, como API, inteligencia artificial y Machine Learning. A través
+                    de este proyecto, se busca desarrollar una solución tecnológica a una
+                    problemática real, utilizando la programación y las herramientas web para
+                    facilitar la comunicación entre personas que utilizan la lengua de señas y
+                    aquellas que no la conocen.
+                </p>
+            </div>
+        </section>
+
+        <section class="banda">
+        <div class="banda-texto">
+            <h2>Créditos</h2>
+            <p>TRADCODE aporta la interfaz y el material de práctica. El motor utiliza MediaPipe, PyTorch y ONNX Runtime Web.
+               La mano 3D utiliza Three.js y WebXR Input Profiles. Los datos de entrenamiento LSC70 son de Muñoz Galindez,
+               Villota Coral y Vargas Cañas, bajo CC BY 4.0.</p>
+            <a href="creditos.txt">Créditos y licencias</a>
+        </div>
+    </section>
+    </main>
+
+    <footer class="pie">La programación también nos acerca</footer>
+</body>
+</html>

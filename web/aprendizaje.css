@@ -1,0 +1,302 @@
+/* -----------------------------------
+   1. CONFIGURACIÓN GENERAL
+-------------------------------------*/
+body.pagina-aprendizaje{
+    margin:0;
+    padding:0;
+    background-color: #F5F0E6;
+    color: #183C3B;
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+/*-----------------------------------
+    BARRA DE NAVEGACIÓN
+-------------------------------------*/
+.pagina-aprendizaje .barra{
+    max-width: 1100px;
+    margin:auto;
+    padding: 25px 20px;
+
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+
+    animation: aparecerBarra 0.8s ease;
+}
+
+.barra-logo {
+    color: #183C3B;
+    font-size: 25px;
+    font-weight: 900;
+    text-decoration: none;
+    letter-spacing: -1px;
+}
+
+.barra-logo span{
+    color: #D87856;
+}
+
+.barra-enlaces {
+    display: flex;
+    align-items: center;
+    gap: 35px;
+}
+
+.barra-enlaces a{
+    color: #287C73;
+    font-size: 15px;
+    font-weight: bold;
+    text-decoration: none;
+
+    position:relative;
+    transition: color 0.3s ease;
+}
+
+.barra-enlaces a::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 0;
+    height: 2px;
+    background-color: #D87856;
+    transition: width 0.3s ease;
+}
+
+.barra-enlaces a:hover{
+    color: #D87856;
+}
+
+.barra-enlaces a:hover::after{
+    width: 100%;
+}
+
+.barra-enlaces a.activo {
+    color: #D87856;
+}
+
+/*Animación de entrada de la barra*/
+@keyframes aparecerBarra {
+    from{
+        opacity: 0;
+        transform: translateY(-15px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/*---------------------------------
+  3. CONTENEDOR  PRINCIPAL
+-----------------------------------*/
+.aprendizaje-contenedor {
+    max-width:1100px;
+    margin: auto;
+    padding: 20px;
+}
+
+/*---------------------------------
+    PRESENTACION
+-----------------------------------*/
+.presentacion-aprendizaje {
+    padding: 65px 15px 55px;
+    animation: aparecerContenido 1s ease;
+}
+
+.etiqueta-aprendizaje {
+    color: #C16D4E;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 4px;
+}
+
+.presentacion-aprendizaje h1{
+    color: #183C3B;
+    font-size: 46px;
+    line-height: 1.2;
+    margin: 20px 0;
+}
+
+.presentacion-aprendizaje p{
+    max-width: 620px;
+    margin: auto;
+    color: #64736A;
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+/*---------------------------
+  ENCABEZADO DE COLECCIONES
+----------------------------*/
+.colecciones{
+    margin-top:25px;
+    padding-bottom:40px;
+    text-align: left;
+}
+
+.encabezado-colecciones{
+    margin-bottom: 28px;
+}
+
+.encabezado-colecciones h2{
+    color: #183C3B;
+    font-size: 28px;
+    margin-bottom: 8px;
+}
+
+.encabezado-colecciones p{
+    color: #64736A;
+    font-size: 15px;
+}
+
+/*---------------------------
+  DISTRIBUCION PARA LAS TARJTAS
+----------------------------*/
+.colecciones-grid{
+    display:grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 28px;
+}
+
+@media (max-width: 640px) {
+    .pagina-aprendizaje .barra {
+        flex-direction: column;
+        gap: 12px;
+    }
+    .pagina-aprendizaje .barra-enlaces {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 6px 16px;
+    }
+    .colecciones-grid {
+        grid-template-columns: minmax(0, 1fr);
+    }
+}
+
+/*---------------------------
+  TARJETAS DE APRENDIZAJE
+----------------------------*/
+.tarjeta-coleccion{
+    background-color: #FFFFFF;
+    border-radius: 20px;
+    overflow: hidden;
+
+    border: 1px solid rgba(24, 60, 59, 0.08);
+    box-shadow: 0 8px 24px rgba(24, 60, 59, 0.07);
+    transition: transform 0.3s ease,
+                box-shadow 0.3s ease;
+
+    animation: aparecerContenido 0.8s ease;
+}
+
+.tarjeta-coleccion:hover{
+    transform: translateY(-6px);
+    box-shadow: 0 14px 30px rgba(24, 60, 59, 0.12);
+}
+
+/* PARTE VISUAL DE LAS TARJETAS */
+
+.imagen-coleccion {
+    width: 100%;
+    height: 300px;
+    background-color: #F5F0E6;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.imagen-coleccion img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+}
+
+.abecedario{
+    background-color: #DCE9DF;
+    color: #183C3B;
+}
+
+.saludos{
+    background-color: #F5DFD2;
+    color: #A64E35;
+}
+
+.expresiones{
+    background-color:#E6E3D2;
+    color:#183C3B;
+}
+
+.conversaciones{
+    background-color: #D9E8E5;
+    color: #287C73;
+}
+
+/*-------------------------
+    CONTENIDO DE LA TARJETA
+--------------------------*/
+.contenido-coleccion{
+    padding: 25px;
+}
+
+.numero-coleccion{
+    color: #C16D4E;
+    font-size:12px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.contenido-coleccion h3{
+    color: #183C3B;
+    font-size: 21px;
+    margin: 12px 0;
+}
+
+.contenido-coleccion p{
+    color: #64736A;
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+.enlace-coleccion{
+    display:inline-block;
+    margin-top: 12px;
+    color: #287C73;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+/*-------------------------
+    PIE DE PAGINA
+--------------------------*/
+.pagina-aprendizaje .pie {
+    margin-top: 30px;
+    padding: 25px 15px;
+
+    color: #7B8981;
+    font-size: 13px;
+}
+
+/*-------------------------
+    ANIMACIONES DE CONTENIDO
+--------------------------*/
+@keyframes aparecerContenido {
+    from{
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/*enlace de las tarjetas*/
+.enlace-tarjeta {
+    text-decoration: none;
+    color: inherit;
+    display:block;
+}
